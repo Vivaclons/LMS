@@ -1,29 +1,19 @@
 package kz.spring.demo.demo;
 
-import kz.spring.demo.demo.configuration.Configuration;
-import kz.spring.demo.demo.entity.*;
-import kz.spring.demo.demo.repository.*;
+import kz.spring.demo.demo.configuration.SecurityConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
 
 @SpringBootApplication
 public class DemoApplication {
 
     public static void main(String[] args) throws IOException {
         SpringApplication.run(DemoApplication.class, args);
-        ApplicationContext ctx = new AnnotationConfigApplicationContext(Configuration.class);
+        ApplicationContext ctx = new AnnotationConfigApplicationContext(SecurityConfig.class);
 
 //        BookRepository bookRepository = (BookRepository) ctx.getBean(Book.class);
 //        CollectionRepository collectionRepository = (CollectionRepository) ctx.getBean(Collection.class);

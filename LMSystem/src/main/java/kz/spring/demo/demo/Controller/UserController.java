@@ -35,7 +35,7 @@ public class UserController {
         return userRepository.existsUserByLoginAndPassword(userName, password);
     }
 
-    @PostMapping("")
+    @PostMapping("/response")
     public User createUser(@RequestBody User user) {
         return userRepository.saveAndFlush(user);
     }

@@ -25,11 +25,8 @@ public class LMSFacade {
     @Autowired
     private CollectionController collectionController;
 
-    @Autowired
-    @Qualifier("getScannerBean")
     private Scanner in;
-    @Autowired
-    @Qualifier("getBufferedReader")
+
     private BufferedReader reader;
 
     private boolean isAuth;
